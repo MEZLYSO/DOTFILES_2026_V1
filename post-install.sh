@@ -6,6 +6,8 @@ BOLD='\e[1;97m'
 RESET='\e[0;97m'
 GREEN='\e[1;32m'
 
+cat ./banner.txt
+
 ##Work
 echo -e "${BOLD}--> Initializing installation...${RESET}"
 echo -e "${GREEN} # Installing dwl dependencies...${RESET}"
@@ -28,5 +30,24 @@ echo -e "${GREEN} # Compiling mew...${RESET}"
 echo -e "${BOLD}--> Fetching themes and icons...${RESET}"
 echo -e "${GREEN} # Installing icon theme (BOSTON)...${RESET}"
 # git clone https://github.com/thecheis/Boston-Icons.git
+# sudo mv ./Boston-Icons /usr/share/icons
+echo -e "${GREEN} # Success icon theme (BOSTON)...${RESET}"
 echo -e "${GREEN} # Installing gtk theme (B00merang-Blackout)...${RESET}"
 # git clone https://github.com/B00merang-Project/B00merang-Blackout.git
+# sudo mv ./B00merang-Blackout /usr/share/themes
+echo -e "${GREEN} # Success gtk theme (B00merang-Blackout)...${RESET}"
+
+##Stuff
+echo -e "${BOLD}--> Installing extra tools...${RESET}"
+# pacman -Sy $(cat packagesExtra.txt) --noconfirm
+
+##Yay
+echo -e "${BOLD}--> Installing Yay...${RESET}"
+# git clone https://aur.archlinux.org/yay.git
+# cd yay
+# makepkg -si
+# cd ..
+# sudo rm -rf ~/go
+
+echo -e "${BOLD}--> Installing extra tools (with yay)...${RESET}"
+# yay -S $(cat ./packagesYAY.txt)

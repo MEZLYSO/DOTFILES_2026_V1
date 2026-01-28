@@ -3,3 +3,8 @@ mew/config.h
 mew/*.o
 mew/*-protocol.c
 mew/*-protocol.h
+slstatus/slstatus
+slstatus/config.h
+slstatus/*.o
+slstatus/components/*.o
+slstatus/*.tar.gz
