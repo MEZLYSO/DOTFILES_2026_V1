@@ -22,20 +22,13 @@ Mi configuraciones y herramientas para este 2026 configuradas a mis necesidades
 ## Cómo usar este repositorio
 
 1. Clona el repo dentro de tu `$HOME`.
-2. Revisa y adapta las rutas en post-install.sh antes de ejecutarlo.
+2. Entra en el directorio **DOTFILES_2026_V1**
 3. Lanza el script con permisos de ejecución:
 
 ```bash
 chmod +x post-install.sh
 ./post-install.sh
 ```
-
-### Listados de paquetes
-
-- packagesDWL.txt: selección de paquetes base para el entorno Wayland.
-- packagesSLS.txt: herramientas CLI, utilidades de sistema y extras opcionales.
-
-Actualiza los listados antes de correr el script para evitar instalar software innecesario.
 
 ## Estado del proyecto 🏗️
 

@@ -5,26 +5,38 @@
 BOLD='\e[1;97m'
 RESET='\e[0;97m'
 GREEN='\e[1;32m'
+YELLOW='\e[1;33m'
+BLUE='\e[1;34m'
 
 cat ./banner.txt
 
 ##Work
 echo -e "${BOLD}--> Initializing installation...${RESET}"
-echo -e "${GREEN} # Installing dwl dependencies...${RESET}"
+echo -e "${BLUE} # Installing dwl dependencies...${RESET}"
 # pacman -Sy $(cat packagesDWL.txt) --noconfirm
-echo -e "${GREEN} # Installing slstatus dependencies...${RESET}"
+echo -e "${GREEN} -> Success...${RESET}"
+
+echo -e "${BLUE} # Installing slstatus dependencies...${RESET}"
 # pacman -Sy $(cat packagesSLS.txt) --noconfirm
-echo -e "${GREEN} # Installing mew dependencies...${RESET}"
+echo -e "${GREEN} -> Success...${RESET}"
+
+echo -e "${BLUE} # Installing mew dependencies...${RESET}"
 # pacman -Sy $(cat packagesMEW.txt) --noconfirm
+echo -e "${GREEN} -> Success...${RESET}"
 
 ## Compiling
 echo -e "${BOLD}--> Compiling...${RESET}"
-echo -e "${GREEN} # Compiling dwl...${RESET}"
+echo -e "${BLUE} # Compiling dwl...${RESET}"
 # sudo make clean install -C ./dwl
-echo -e "${GREEN} # Compiling slstatus...${RESET}"
+echo -e "${GREEN} -> Success...${RESET}"
+
+echo -e "${BLUE} # Compiling slstatus...${RESET}"
 # sudo make clean install -C ./slstatus
-echo -e "${GREEN} # Compiling mew...${RESET}"
+echo -e "${GREEN} -> Success...${RESET}"
+
+echo -e "${BLUE} # Compiling mew...${RESET}"
 # sudo make clean install -C ./mew
+echo -e "${GREEN} -> Success...${RESET}"
 
 ##Theme
 echo -e "${BOLD}--> Fetching themes and icons...${RESET}"
@@ -51,3 +63,6 @@ echo -e "${BOLD}--> Installing Yay...${RESET}"
 
 echo -e "${BOLD}--> Installing extra tools (with yay)...${RESET}"
 # yay -S $(cat ./packagesYAY.txt)
+
+echo -e "${BOLD}--> Copy config files...${RESET}"
+# cp -r ./config/* $HOME/.config/
